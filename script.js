@@ -76,10 +76,24 @@ navLinks.forEach(link => {
 // Navbar background on scroll
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
+    const currentTheme = document.body.getAttribute('data-theme');
+    
     if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(10, 10, 10, 0.98)';
+        if (currentTheme === 'light') {
+            navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+            navbar.style.backdropFilter = 'blur(10px)';
+        } else {
+            navbar.style.background = 'rgba(10, 10, 10, 0.98)';
+            navbar.style.backdropFilter = 'blur(10px)';
+        }
     } else {
-        navbar.style.background = 'rgba(10, 10, 10, 0.95)';
+        if (currentTheme === 'light') {
+            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+            navbar.style.backdropFilter = 'blur(5px)';
+        } else {
+            navbar.style.background = 'rgba(10, 10, 10, 0.95)';
+            navbar.style.backdropFilter = 'blur(5px)';
+        }
     }
 });
 
