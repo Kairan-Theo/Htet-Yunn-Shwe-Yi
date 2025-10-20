@@ -341,6 +341,132 @@ document.head.appendChild(loadedStyle);
 
 
 // Console message for developers
+// Modal functionality for "View More" projects
+const viewMoreBtn = document.getElementById('viewMoreBtn');
+const modal = document.getElementById('projectsModal');
+const modalClose = document.querySelector('.modal-close');
+const modalProjectsGrid = document.querySelector('.modal-projects-grid');
+
+// All projects data (including the ones already shown)
+const allProjects = [
+    {
+        title: "MFU Character Website",
+        description: "A dynamic character showcase website featuring interactive elements and modern design principles.",
+        skillLevel: "intermediate",
+        image: "images/mfu.svg",
+        techTags: ["HTML", "CSS", "JavaScript", "Responsive Design"]
+    },
+    {
+        title: "Tour Package Platform",
+        description: "A comprehensive travel booking platform with user authentication and payment integration.",
+        skillLevel: "advanced",
+        image: "images/tour.svg",
+        techTags: ["React", "Node.js", "MongoDB", "Stripe API"]
+    },
+    {
+        title: "GitHub Portfolio",
+        description: "A clean and professional portfolio website showcasing development projects and skills.",
+        skillLevel: "intermediate",
+        image: "images/github.svg",
+        techTags: ["HTML", "CSS", "JavaScript", "Git"]
+    },
+    {
+        title: "Personal Portfolio",
+        description: "A modern, responsive portfolio website with glassmorphism design and smooth animations.",
+        skillLevel: "advanced",
+        image: "images/hy.svg",
+        techTags: ["HTML", "CSS", "JavaScript", "GSAP"]
+    },
+    {
+        title: "E-Commerce Dashboard",
+        description: "A comprehensive admin dashboard for managing products, orders, and customer data.",
+        skillLevel: "advanced",
+        image: "images/ecommerce.svg",
+        techTags: ["React", "TypeScript", "Chart.js", "REST API"]
+    },
+    {
+        title: "Weather App",
+        description: "A responsive weather application with location-based forecasts and interactive maps.",
+        skillLevel: "intermediate",
+        image: "images/weather.svg",
+        techTags: ["JavaScript", "API Integration", "CSS Grid", "Geolocation"]
+    },
+    {
+        title: "Task Management System",
+        description: "A collaborative project management tool with real-time updates and team collaboration features.",
+        skillLevel: "advanced",
+        image: "images/task.svg",
+        techTags: ["Vue.js", "Socket.io", "Express", "PostgreSQL"]
+    },
+    {
+        title: "Recipe Finder",
+        description: "A food discovery app that helps users find recipes based on available ingredients.",
+        skillLevel: "beginner",
+        image: "images/recipe.svg",
+        techTags: ["HTML", "CSS", "JavaScript", "Recipe API"]
+    }
+];
+
+// Function to create project card HTML
+function createProjectCard(project) {
+    return `
+        <div class="modal-project-card">
+            <div class="project-thumbnail">
+                <img src="${project.image}" alt="${project.title}" class="project-img">
+            </div>
+            <div class="project-info">
+                <div class="project-header">
+                    <span class="skill-level ${project.skillLevel}">${project.skillLevel.charAt(0).toUpperCase() + project.skillLevel.slice(1)}</span>
+                </div>
+                <h3 class="project-title">${project.title}</h3>
+                <p class="project-description">${project.description}</p>
+                <div class="tech-tags">
+                    ${project.techTags.map(tag => `<span class="tech-tag">${tag}</span>`).join('')}
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+// Function to populate modal with all projects
+function populateModal() {
+    modalProjectsGrid.innerHTML = allProjects.map(project => createProjectCard(project)).join('');
+}
+
+// Event listeners
+if (viewMoreBtn) {
+    viewMoreBtn.addEventListener('click', () => {
+        populateModal();
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    });
+}
+
+if (modalClose) {
+    modalClose.addEventListener('click', () => {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto'; // Restore scrolling
+    });
+}
+
+// Close modal when clicking outside
+if (modal) {
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    });
+}
+
+// Close modal with Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+});
+
 console.log('%c👋 Hello there, fellow developer!', 'color: #667eea; font-size: 16px; font-weight: bold;');
 console.log('%cThanks for checking out the code. Feel free to reach out if you have any questions!', 'color: #888; font-size: 12px;');
 

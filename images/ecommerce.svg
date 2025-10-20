@@ -1,0 +1,60 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ecommerceGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="chartGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#ecommerceGradient)" opacity="0.1"/>
+  
+  <!-- Dashboard Container -->
+  <rect x="20" y="40" width="360" height="220" rx="12" fill="url(#ecommerceGradient)" opacity="0.8"/>
+  
+  <!-- Header Bar -->
+  <rect x="30" y="50" width="340" height="30" rx="6" fill="rgba(255,255,255,0.2)"/>
+  <circle cx="50" cy="65" r="6" fill="rgba(255,255,255,0.6)"/>
+  <rect x="65" y="60" width="80" height="10" rx="5" fill="rgba(255,255,255,0.4)"/>
+  
+  <!-- Stats Cards -->
+  <rect x="40" y="100" width="70" height="50" rx="8" fill="rgba(255,255,255,0.3)"/>
+  <rect x="120" y="100" width="70" height="50" rx="8" fill="rgba(255,255,255,0.3)"/>
+  <rect x="200" y="100" width="70" height="50" rx="8" fill="rgba(255,255,255,0.3)"/>
+  <rect x="280" y="100" width="70" height="50" rx="8" fill="rgba(255,255,255,0.3)"/>
+  
+  <!-- Chart Area -->
+  <rect x="40" y="170" width="150" height="80" rx="8" fill="rgba(255,255,255,0.2)"/>
+  
+  <!-- Bar Chart -->
+  <rect x="50" y="220" width="8" height="20" fill="url(#chartGradient)"/>
+  <rect x="65" y="210" width="8" height="30" fill="url(#chartGradient)"/>
+  <rect x="80" y="200" width="8" height="40" fill="url(#chartGradient)"/>
+  <rect x="95" y="215" width="8" height="25" fill="url(#chartGradient)"/>
+  <rect x="110" y="205" width="8" height="35" fill="url(#chartGradient)"/>
+  <rect x="125" y="195" width="8" height="45" fill="url(#chartGradient)"/>
+  <rect x="140" y="210" width="8" height="30" fill="url(#chartGradient)"/>
+  <rect x="155" y="200" width="8" height="40" fill="url(#chartGradient)"/>
+  <rect x="170" y="225" width="8" height="15" fill="url(#chartGradient)"/>
+  
+  <!-- Table Area -->
+  <rect x="210" y="170" width="140" height="80" rx="8" fill="rgba(255,255,255,0.2)"/>
+  
+  <!-- Table Rows -->
+  <rect x="220" y="180" width="120" height="8" rx="4" fill="rgba(255,255,255,0.4)"/>
+  <rect x="220" y="195" width="120" height="8" rx="4" fill="rgba(255,255,255,0.3)"/>
+  <rect x="220" y="210" width="120" height="8" rx="4" fill="rgba(255,255,255,0.4)"/>
+  <rect x="220" y="225" width="120" height="8" rx="4" fill="rgba(255,255,255,0.3)"/>
+  
+  <!-- Shopping Cart Icon -->
+  <g transform="translate(180, 20)">
+    <rect x="0" y="8" width="20" height="15" rx="2" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="2"/>
+    <circle cx="6" cy="28" r="2" fill="rgba(255,255,255,0.8)"/>
+    <circle cx="14" cy="28" r="2" fill="rgba(255,255,255,0.8)"/>
+    <path d="M0 2 L4 2 L6 8 L18 8" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="2"/>
+  </g>
+</svg>

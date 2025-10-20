@@ -1,0 +1,93 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="recipeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fd79a8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fdcb6e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="plateGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f8f9fa;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="foodGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#e17055;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d63031;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#recipeGradient)" opacity="0.1"/>
+  
+  <!-- App Interface -->
+  <rect x="30" y="40" width="340" height="220" rx="15" fill="url(#recipeGradient)" opacity="0.8"/>
+  
+  <!-- Header -->
+  <rect x="40" y="50" width="320" height="30" rx="8" fill="rgba(255,255,255,0.2)"/>
+  <text x="200" y="70" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold">Recipe Finder</text>
+  
+  <!-- Search Bar -->
+  <rect x="50" y="100" width="300" height="25" rx="12" fill="rgba(255,255,255,0.3)"/>
+  <text x="65" y="117" fill="rgba(255,255,255,0.7)" font-family="Arial, sans-serif" font-size="12">Search ingredients...</text>
+  <g transform="translate(320, 112)">
+    <circle cx="0" cy="0" r="8" fill="rgba(255,255,255,0.5)"/>
+    <circle cx="0" cy="0" r="5" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="2"/>
+    <line x1="4" y1="4" x2="7" y2="7" stroke="rgba(255,255,255,0.8)" stroke-width="2"/>
+  </g>
+  
+  <!-- Recipe Cards -->
+  <!-- Card 1 -->
+  <rect x="50" y="140" width="90" height="100" rx="10" fill="rgba(255,255,255,0.9)"/>
+  <!-- Plate -->
+  <ellipse cx="95" cy="170" rx="25" ry="20" fill="url(#plateGradient)" stroke="#ddd" stroke-width="1"/>
+  <!-- Food -->
+  <circle cx="95" cy="170" r="12" fill="url(#foodGradient)"/>
+  <ellipse cx="90" cy="165" rx="4" ry="3" fill="#00b894"/>
+  <ellipse cx="100" cy="175" rx="3" ry="2" fill="#00b894"/>
+  <text x="95" y="200" text-anchor="middle" fill="#2d3436" font-family="Arial, sans-serif" font-size="10" font-weight="bold">Pasta</text>
+  <text x="95" y="215" text-anchor="middle" fill="#636e72" font-family="Arial, sans-serif" font-size="8">25 min</text>
+  <g transform="translate(120, 150)">
+    <path d="M0,0 L3,6 L6,0 Z" fill="#fdcb6e"/>
+    <path d="M0,0 L3,6 L6,0 Z" fill="#fdcb6e"/>
+  </g>
+  
+  <!-- Card 2 -->
+  <rect x="155" y="140" width="90" height="100" rx="10" fill="rgba(255,255,255,0.9)"/>
+  <!-- Plate -->
+  <ellipse cx="200" cy="170" rx="25" ry="20" fill="url(#plateGradient)" stroke="#ddd" stroke-width="1"/>
+  <!-- Food -->
+  <ellipse cx="200" cy="170" rx="15" ry="8" fill="#00b894"/>
+  <circle cx="195" cy="168" r="3" fill="#e17055"/>
+  <circle cx="205" cy="172" r="3" fill="#e17055"/>
+  <text x="200" y="200" text-anchor="middle" fill="#2d3436" font-family="Arial, sans-serif" font-size="10" font-weight="bold">Salad</text>
+  <text x="200" y="215" text-anchor="middle" fill="#636e72" font-family="Arial, sans-serif" font-size="8">15 min</text>
+  <g transform="translate(225, 150)">
+    <path d="M0,0 L3,6 L6,0 Z" fill="#fdcb6e"/>
+    <path d="M0,0 L3,6 L6,0 Z" fill="#fdcb6e"/>
+    <path d="M0,0 L3,6 L6,0 Z" fill="#fdcb6e"/>
+  </g>
+  
+  <!-- Card 3 -->
+  <rect x="260" y="140" width="90" height="100" rx="10" fill="rgba(255,255,255,0.9)"/>
+  <!-- Plate -->
+  <ellipse cx="305" cy="170" rx="25" ry="20" fill="url(#plateGradient)" stroke="#ddd" stroke-width="1"/>
+  <!-- Food -->
+  <rect x="290" y="165" width="30" height="10" rx="5" fill="#d63031"/>
+  <ellipse cx="295" cy="175" rx="3" ry="2" fill="#00b894"/>
+  <ellipse cx="315" cy="175" rx="3" ry="2" fill="#00b894"/>
+  <text x="305" y="200" text-anchor="middle" fill="#2d3436" font-family="Arial, sans-serif" font-size="10" font-weight="bold">Pizza</text>
+  <text x="305" y="215" text-anchor="middle" fill="#636e72" font-family="Arial, sans-serif" font-size="8">30 min</text>
+  <g transform="translate(330, 150)">
+    <path d="M0,0 L3,6 L6,0 Z" fill="#fdcb6e"/>
+    <path d="M0,0 L3,6 L6,0 Z" fill="#fdcb6e"/>
+    <path d="M0,0 L3,6 L6,0 Z" fill="#fdcb6e"/>
+    <path d="M0,0 L3,6 L6,0 Z" fill="#fdcb6e"/>
+  </g>
+  
+  <!-- Chef Hat Icon -->
+  <g transform="translate(200, 20)">
+    <ellipse cx="0" cy="8" rx="15" ry="4" fill="rgba(255,255,255,0.8)"/>
+    <path d="M-12,8 Q-12,0 -8,-4 Q-4,-8 0,-8 Q4,-8 8,-4 Q12,0 12,8 Z" fill="rgba(255,255,255,0.9)"/>
+    <circle cx="-8" cy="2" r="3" fill="rgba(255,255,255,0.7)"/>
+    <circle cx="8" cy="2" r="3" fill="rgba(255,255,255,0.7)"/>
+    <circle cx="0" cy="-2" r="4" fill="rgba(255,255,255,0.7)"/>
+  </g>
+</svg>
