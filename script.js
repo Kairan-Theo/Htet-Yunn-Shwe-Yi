@@ -362,8 +362,8 @@ const allProjects = [
         title: "Tour Package Platform",
         description: "A comprehensive travel booking platform with user authentication and payment integration.",
         skillLevel: "advanced",
-        image: "images/tour.svg",
-        techTags: ["React", "Node.js", "MongoDB", "Stripe API"],
+        image: "images/hi.png",
+        techTags: ["HTML", "CSS", "JavaScript", "GSAP"],
         liveLink: "https://tour-package-platform.vercel.app/",
         githubLink: "https://github.com/HtetYunn/tour-package"
     },

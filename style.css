@@ -1408,6 +1408,8 @@ section {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     transform: perspective(1000px) rotateY(-5deg);
     transition: transform 0.3s ease;
+    height: 400px;
+    background: linear-gradient(135deg, var(--bg-secondary), var(--bg-primary));
 }
 
 .tour-banner-image:hover {
@@ -1416,9 +1418,12 @@ section {
 
 .tour-img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
     display: block;
     border-radius: 20px;
+    transition: transform 0.3s ease;
 }
 
 .tour-banner-text {
