@@ -347,63 +347,43 @@ const modal = document.getElementById('projectsModal');
 const modalClose = document.querySelector('.modal-close');
 const modalProjectsGrid = document.querySelector('.modal-projects-grid');
 
-// All projects data (including the ones already shown)
+// All projects data (matching the featured projects)
 const allProjects = [
     {
-        title: "MFU Character Website",
-        description: "A dynamic character showcase website featuring interactive elements and modern design principles.",
-        skillLevel: "intermediate",
-        image: "images/mfu.svg",
-        techTags: ["HTML", "CSS", "JavaScript", "Responsive Design"]
+        title: "Personal Portfolio",
+        description: "A modern, responsive portfolio website with glassmorphism design and smooth animations.",
+        skillLevel: "advanced",
+        image: "images/port.png",
+        techTags: ["HTML", "CSS", "JavaScript", "GSAP"],
+        liveLink: "#",
+        githubLink: "https://github.com/HtetYunn/portfolio"
     },
     {
         title: "Tour Package Platform",
         description: "A comprehensive travel booking platform with user authentication and payment integration.",
         skillLevel: "advanced",
         image: "images/tour.svg",
-        techTags: ["React", "Node.js", "MongoDB", "Stripe API"]
+        techTags: ["React", "Node.js", "MongoDB", "Stripe API"],
+        liveLink: "https://tour-package-platform.vercel.app/",
+        githubLink: "https://github.com/HtetYunn/tour-package"
     },
     {
-        title: "GitHub Portfolio",
-        description: "A clean and professional portfolio website showcasing development projects and skills.",
+        title: "InteU",
+        description: "An intelligent university platform with advanced features for student management and academic resources.",
+        skillLevel: "advanced",
+        image: "images/inteU.png",
+        techTags: ["React", "Next.js", "Vercel"],
+        liveLink: "https://inteu.vercel.app/",
+        githubLink: "https://github.com/HtetYunn/InteU"
+    },
+    {
+        title: "Message Sender",
+        description: "A real-time messaging application with modern UI and seamless communication features.",
         skillLevel: "intermediate",
-        image: "images/github.svg",
-        techTags: ["HTML", "CSS", "JavaScript", "Git"]
-    },
-    {
-        title: "Personal Portfolio",
-        description: "A modern, responsive portfolio website with glassmorphism design and smooth animations.",
-        skillLevel: "advanced",
-        image: "images/hy.svg",
-        techTags: ["HTML", "CSS", "JavaScript", "GSAP"]
-    },
-    {
-        title: "E-Commerce Dashboard",
-        description: "A comprehensive admin dashboard for managing products, orders, and customer data.",
-        skillLevel: "advanced",
-        image: "images/ecommerce.svg",
-        techTags: ["React", "TypeScript", "Chart.js", "REST API"]
-    },
-    {
-        title: "Weather App",
-        description: "A responsive weather application with location-based forecasts and interactive maps.",
-        skillLevel: "intermediate",
-        image: "images/weather.svg",
-        techTags: ["JavaScript", "API Integration", "CSS Grid", "Geolocation"]
-    },
-    {
-        title: "Task Management System",
-        description: "A collaborative project management tool with real-time updates and team collaboration features.",
-        skillLevel: "advanced",
-        image: "images/task.svg",
-        techTags: ["Vue.js", "Socket.io", "Express", "PostgreSQL"]
-    },
-    {
-        title: "Recipe Finder",
-        description: "A food discovery app that helps users find recipes based on available ingredients.",
-        skillLevel: "beginner",
-        image: "images/recipe.svg",
-        techTags: ["HTML", "CSS", "JavaScript", "Recipe API"]
+        image: "images/message.png",
+        techTags: ["JavaScript", "WebSocket", "CSS3"],
+        liveLink: "https://message-sender-flax.vercel.app/",
+        githubLink: "https://github.com/HtetYunn/message-sender"
     }
 ];
 
@@ -413,6 +393,16 @@ function createProjectCard(project) {
         <div class="modal-project-card">
             <div class="project-thumbnail">
                 <img src="${project.image}" alt="${project.title}" class="project-img">
+                <div class="project-overlay">
+                    <div class="project-links">
+                        <a href="${project.liveLink}" target="_blank" class="project-link live-link">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                        <a href="${project.githubLink}" target="_blank" class="project-link github-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
             <div class="project-info">
                 <div class="project-header">
