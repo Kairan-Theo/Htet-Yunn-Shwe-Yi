@@ -19,40 +19,7 @@ navLinks.forEach(link => {
 });
 
 
-// Theme Toggle Functionality
-const themeToggle = document.getElementById('theme-toggle');
-const themeIcon = themeToggle.querySelector('i');
-const body = document.body;
 
-
-// Check for saved theme preference or default to 'dark'
-const currentTheme = localStorage.getItem('theme') || 'dark';
-body.setAttribute('data-theme', currentTheme);
-
-
-// Update icon based on current theme
-function updateThemeIcon(theme) {
-    if (theme === 'dark') {
-        themeIcon.className = 'fas fa-sun';
-    } else {
-        themeIcon.className = 'fas fa-moon';
-    }
-}
-
-
-// Initialize icon
-updateThemeIcon(currentTheme);
-
-
-// Theme toggle event listener
-themeToggle.addEventListener('click', () => {
-    const currentTheme = body.getAttribute('data-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-   
-    body.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-    updateThemeIcon(newTheme);
-});
 
 
 // Smooth scrolling for navigation links
@@ -76,24 +43,13 @@ navLinks.forEach(link => {
 // Navbar background on scroll
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
-    const currentTheme = document.body.getAttribute('data-theme');
     
     if (window.scrollY > 50) {
-        if (currentTheme === 'light') {
-            navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-            navbar.style.backdropFilter = 'blur(10px)';
-        } else {
-            navbar.style.background = 'rgba(10, 10, 10, 0.98)';
-            navbar.style.backdropFilter = 'blur(10px)';
-        }
+        navbar.style.background = 'rgba(10, 10, 10, 0.98)';
+        navbar.style.backdropFilter = 'blur(10px)';
     } else {
-        if (currentTheme === 'light') {
-            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-            navbar.style.backdropFilter = 'blur(5px)';
-        } else {
-            navbar.style.background = 'rgba(10, 10, 10, 0.95)';
-            navbar.style.backdropFilter = 'blur(5px)';
-        }
+        navbar.style.background = 'rgba(10, 10, 10, 0.95)';
+        navbar.style.backdropFilter = 'blur(5px)';
     }
 });
 

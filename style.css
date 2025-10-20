@@ -1,9 +1,5 @@
-/* CSS Variables for Theme Support */
+/* CSS Variables */
 :root {
-
-
-
-[data-theme="dark"] {
     /* Dark theme colors */
     --bg-primary: #0a0a0a;
     --bg-secondary: #111;
@@ -145,38 +141,7 @@ body {
 }
 
 
-/* Theme Toggle */
-.theme-toggle {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin-left: 1rem;
-}
 
-
-.theme-toggle:hover {
-    background: var(--text-accent);
-    transform: scale(1.1);
-}
-
-
-.theme-toggle i {
-    color: var(--text-primary);
-    font-size: 1.2rem;
-    transition: all 0.3s ease;
-}
-
-
-.theme-toggle:hover i {
-    color: white;
-}
 
 
 /* Hero Section */
